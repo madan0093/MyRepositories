@@ -1,0 +1,12 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index()
+GET     /getDesigner/:id           controllers.VendorBusinessLogic.getDesigner(id:Long)
+#POST    /createDesigner            /controllers.VendorBusinessLogic.createDesigner()
+GET     /getDesignerList           controllers.VendorBusinessLogic.getDesignerList()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
